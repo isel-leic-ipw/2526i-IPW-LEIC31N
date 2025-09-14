@@ -1,4 +1,37 @@
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 function copiar(de, para, info) {
 
     para =[];
@@ -28,3 +61,4 @@ function escreve_consola () {
 }
 
 escreve_consola()("ola");
+*/

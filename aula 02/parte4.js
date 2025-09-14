@@ -1,3 +1,38 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 import "./modulo.js"
 import { somatorio } from "./modulo.js"
 
@@ -33,3 +68,4 @@ Bike.prototype.bell = function () {console.log("triimmm: " + this.color)}
 
 var myBike = new Bike("red");
 myBike.bell()
+*/

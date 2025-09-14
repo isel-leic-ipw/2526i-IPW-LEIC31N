@@ -1,3 +1,37 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 Parte 3 - Arrays - Funções
     forEach - Revisão
@@ -7,9 +41,10 @@ Parte 3 - Arrays - Funções
     Composição
 */
 
+/*
 var meu_array = ["jose","andré","filipa", "marisa"];
 
-//meu_array.forEach (elem=> console.log(elem));
+meu_array.forEach (elem=> console.log(elem));
 
 // filter
 meu_array
@@ -21,3 +56,4 @@ meu_array
 console.log(
     [1,2,3,4,5].reduce((a,b)=>a+b)
 );
+*/
