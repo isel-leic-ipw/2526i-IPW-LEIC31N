@@ -1,10 +1,17 @@
 
 
+var nome = ["jose", "ana","rita"];
+
+
+var nomes_com_a = nome.filter(
+    (elem) => elem.includes("a")
+).map(
+    (elem) => elem.toUpperCase()
+)
 
 
 
-
-
+console.log(nomes_com_a);
 
 
 

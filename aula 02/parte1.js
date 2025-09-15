@@ -1,4 +1,15 @@
+"use strict"
 
+
+function fun(a) {console.log(a)};
+
+console.log(
+fun(1,3)
+);
+
+[1,2,3,4,5].forEach(
+ (elem) {fun(x);}
+)
 
 
 

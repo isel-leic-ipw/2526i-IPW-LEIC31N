@@ -1,11 +1,26 @@
 
+var Carro = function () {
+    this.marca ="";
+    this.cor ="";
+}
+
+Carro.prototype.ligarMotor = function () {
+    console.log ("Marca: " + this.marca + " está ligado");
+    console.log ("Cor: " + this.cor + " está ligado");
+}
 
 
 
+var carro1 = new Carro();
+carro1.marca ="opel";
+carro1.cor= "branco";
 
+var carro2 = new Carro();
+carro2.marca ="ferrari";
+carro2.cor= "vermelho";
 
-
-
+carro1.ligarMotor();
+carro2.ligarMotor();
 
 
 
