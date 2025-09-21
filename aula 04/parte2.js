@@ -24,5 +24,10 @@ readFile("./2526i-IPW-LEIC31N/aula 04/alunos.txt", "utf-8",processa_dados);
 
 // Promises
 let promessa = promises.readFile("./2526i-IPW-LEIC31N/aula 04/alunos.txt", 'utf-8');
-promessa.then (processa_dados).then(()=> console.log("Real Finished!"))
+promessa
+    .then (processa_dados)
+    .then(()=> console.log("Real Finished!"))
+
+
+// DONE!
 console.log ("all Done")
