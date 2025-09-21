@@ -5,9 +5,14 @@ Note: You can use Date() to get a string with the current date and time in the d
 */
 
 
-old = console.log;
+
+"use strict"
+
+
+let old = console.log;
 
 console.log = function (text) {
+    
     old(Date() + " - " + text)
 }
 
