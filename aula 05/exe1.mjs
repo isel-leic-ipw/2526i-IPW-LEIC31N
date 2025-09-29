@@ -1,6 +1,8 @@
 
 function validateArrayElements (arr, elementValidator) {
     // funcao de exemplo
+
+    let x = 1;
     
     
 }

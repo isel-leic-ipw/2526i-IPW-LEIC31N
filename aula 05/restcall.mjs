@@ -4,8 +4,9 @@
 
 import fetch from 'node-fetch'; 
 
-let retorno = fetch ("https://api.chucknorris.io/jokes/random").then (
-   async (rest) => {
+let retorno = fetch ("https://api.chucknorris.io/jokes/random").
+then (
+  async (rest) => {
       let valor = await rest.json();
       console.log(valor.value);
       
