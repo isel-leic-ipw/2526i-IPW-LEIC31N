@@ -3,7 +3,6 @@ function validateArrayElements (arr, elementValidator) {
     // funcao de exemplo
     
     
-    
 }
 
 const numbers = [2, 3, 4, 5];
