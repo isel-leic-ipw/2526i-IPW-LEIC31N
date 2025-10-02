@@ -3,9 +3,12 @@
 
 <script language="javascript">
 
-    function olaMundo() {
+    async function olaMundo() {
         console.log("ola mundo");
-        document.getElementById("placeholder").innerText +="Olá Mundo; ";
+
+        let ret = await fetch('http://localhost:8080/api/class?name=IPW_QUERY');
+        
+        document.getElementById("placeholder").innerText += ' ' + (await ret.json()).name;
     }
 
 </script>
