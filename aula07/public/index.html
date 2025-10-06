@@ -1,6 +1,6 @@
 <html>
 <head>
-
+<!--
 <script language="javascript">
 
     async function olaMundo() {
@@ -10,6 +10,24 @@
         
         document.getElementById("placeholder").innerText += ' ' + (await ret.json()).name;
     }
+
+</script>
+-->
+
+
+<script>
+    async function olaMundo() {
+
+        let name_message = await fetch ('/classes/IPW2222222');
+        let name = (await name_message.json()).name;
+
+
+        console.log("ola mundo");
+        document.getElementById("placeholder").innerText +="Olá " + name;
+    }
+
+
+
 
 </script>
 
