@@ -5,6 +5,8 @@ import express from "express";
 const app = express();
 app.use(express.json());
 
+
+
 // 2 - Declarar a pasta do site estatico
 app.use(express.static('/Users/Fstn/ISEL/IPW/2526i-IPW-LEIC31N/aula09/public'));
 
