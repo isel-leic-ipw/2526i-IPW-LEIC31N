@@ -5,6 +5,8 @@ import express from "express";
 const app = express();
 app.use(express.json());
 
+//TESTE
+
 
 
 // 2 - Declarar a pasta do site estatico
