@@ -17,18 +17,31 @@ app.listen(8080, () => {
 // api categorias
 app.get('/api/categorias', (req,res) => {
     let catg_chuck;
-    //let output = ["animal","career","celebrity","dev","explicit","fashion","food","history","money","movie","music","political","religion","science","sport","travel"];
 
     // chamar a api de categorias do chucknorris
     let retorno = fetch ("https://api.chucknorris.io/jokes/categories").
     then (
         async (rest) => {
             catg_chuck = await rest.json();
-            console.log(catg_chuck);
             res.status(200).json(catg_chuck);
         }
     )
 
 });
+
+
+// api anedota
+app.get('/api/anedota/:cat', (req,res) => {
+
+   let cat= req.params.cat;
+
+   // chamar a api do chuck norris
+   // https://api.chucknorris.io/jokes/random?category={category}
+   
+
+});
+
+
+
 
 
