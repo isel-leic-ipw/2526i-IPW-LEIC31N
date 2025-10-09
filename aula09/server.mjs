@@ -19,7 +19,7 @@ app.get('/api/categorias', (req,res) => {
     let catg_chuck;
 
     // chamar a api de categorias do chucknorris
-    let retorno = fetch ("https://api.chucknorris.io/jokes/categories").
+    fetch ("https://api.chucknorris.io/jokes/categories").
     then (
         async (rest) => {
             catg_chuck = await rest.json();
@@ -34,10 +34,20 @@ app.get('/api/categorias', (req,res) => {
 app.get('/api/anedota/:cat', (req,res) => {
 
    let cat= req.params.cat;
+   let anedota;
 
    // chamar a api do chuck norris
    // https://api.chucknorris.io/jokes/random?category={category}
-   
+
+     // chamar a api de categorias do chucknorris
+    fetch ("https://api.chucknorris.io/jokes/random?category=" + cat ).
+    then (
+        async (rest) => {
+            anedota = await rest.json();
+            res.status(200).json(anedota);
+        }
+    )  
+
 
 });
 

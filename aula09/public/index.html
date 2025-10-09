@@ -16,9 +16,24 @@
 
                 }
             );
+        }
+
+           function carregaAnedota () {
+           
+            let combo = document.getElementById("optionCatg");
+
+           
+
+            fetch('/api/anedota/' + combo.value).then (
+               async (rest) => {
+                    let texto = await rest.json();
+                    let place_holder = document.getElementById("anedota_placeholder");
+
+                    place_holder.innerHTML = texto.value;
 
 
-
+                }
+            );
         }
 
     </script>
@@ -36,16 +51,17 @@
         </select>
 
   
-    <button name="Obter"> 
+    <button name="Obter" onclick="javascript:carregaAnedota()"> 
         Obter
     </button>
     <br>
     <br>
+    <img src="https://api.chucknorris.io/img/avatar/chuck-norris.png" />
     <div id="anedota_placeholder"
-    <h1>
-        Olá Mundo!
-    </h1>
-</div>
+        <h1>
+            Olá Mundo!
+        </h1>
+    </div>
 
 </body>
 
