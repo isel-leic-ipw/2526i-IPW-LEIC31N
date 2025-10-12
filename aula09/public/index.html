@@ -1,6 +1,14 @@
 <html>
 <head>
 
+    <style>
+    .round-image {
+        height: 10%; /* Ensure width and height are equal */
+        border-radius: 50%; /* Makes the image circular */
+        object-fit: cover; /* Ensures proper scaling */
+    }
+    </style>
+
     <script>
          function carregaCategorias () {
            
@@ -21,10 +29,10 @@
            function carregaAnedota () {
            
             let combo = document.getElementById("optionCatg");
-
+            let nome  = document.getElementById("nome");
            
 
-            fetch('/api/anedota/' + combo.value).then (
+            fetch('/api/anedota/' + combo.value + '/' + nome.value).then (
                async (rest) => {
                     let texto = await rest.json();
                     let place_holder = document.getElementById("anedota_placeholder");
@@ -45,6 +53,8 @@
 
 
 <body onload="javascript:carregaCategorias()">
+    Nome: <input type="text" id="nome" value="Chuck Norris"/>
+    <br>
     Categoria:
     
         <select id="optionCatg">
@@ -56,7 +66,13 @@
     </button>
     <br>
     <br>
+
     <img src="https://api.chucknorris.io/img/avatar/chuck-norris.png" />
+    <!--
+    <img src="https://tse2.mm.bing.net/th/id/OIP.n1HTTniKIdYo19_Sy2PLOAHaGZ?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" />
+    -->
+
+    
     <div id="anedota_placeholder"
         <h1>
             Olá Mundo!

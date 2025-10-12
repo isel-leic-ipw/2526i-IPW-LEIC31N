@@ -35,10 +35,11 @@ app.get('/api/categorias', (req,res) => {
 
 
 // api anedota
-app.get('/api/anedota/:cat', (req,res) => {
+app.get('/api/anedota/:cat/:nome', (req,res) => {
 
    let cat= req.params.cat;
    let anedota;
+   let nome = req.params.nome;
 
    // chamar a api do chuck norris
    // https://api.chucknorris.io/jokes/random?category={category}
@@ -48,6 +49,7 @@ app.get('/api/anedota/:cat', (req,res) => {
     then (
         async (rest) => {
             anedota = await rest.json();
+            anedota.value = (anedota.value + '').replaceAll('Chuck Norris','<b class="destaque">' + nome + '</b>');
             res.status(200).json(anedota);
         }
     )  
