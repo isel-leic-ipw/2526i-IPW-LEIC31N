@@ -1,0 +1,31 @@
+
+.azul {
+    color:red;
+    font-size: 10px;
+}
+
+h1 {
+  color: #86d400;
+}
+
+p { 
+    color: rgb(42, 228, 249); 
+    visibility: true;
+}
+
+form p { color: rgb(249, 42, 42); }
+
+/* Por classe */
+.intro { 
+    font-size: 18px; 
+    color:blueviolet;
+}
+
+ #password  { 
+    border: 1px solid black; 
+    color: aqua;
+}
+
+#workspace {
+    visibility: hidden;
+}

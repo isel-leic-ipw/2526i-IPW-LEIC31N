@@ -1,0 +1,1 @@
+alert('dentro do script');
