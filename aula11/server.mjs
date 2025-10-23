@@ -2,13 +2,33 @@
 
 // 1 - preparar o express
 import express from "express";
-
+import webapi from "./students_webapi.mjs";
 const app = express();
+
+//app.use(logMiddleware);
 app.use(express.json());
 
-let students = [];
 
-let last_id = 0;
+
+
+
+
+function logMiddleware(req, res, next) {
+    console.log("Estou no middleware de log");
+    let token = "XYZ123";
+
+    if (token != "XYZ12") { 
+        res.status(200).send("SITE UNAVAILABLE");
+    } else {
+        next();
+    }
+
+   
+}
+
+app.get ('/students', webapi.listStudents);
+app.post('/students', webapi.addStudent);
+app.get('/students', webapi.getStudent);
 
 
 // 2- Lançar o servidor
@@ -44,10 +64,7 @@ app.post('/students', (req, ret) => {
 
 
 
-app.get ('/students', (req,ret) => {
-    ret.status(200).json(students);
 
-});
 
 app.get ('/students/:id', (req,ret) => {
     let id= req.params.id;
@@ -65,3 +82,15 @@ app.get ('/students/:id', (req,ret) => {
    }
 
 });
+
+
+
+
+/* Middleware exemplo */
+// //res.status(200).send("SITE UNAVAILABLE");
+app.use(myMiddleware);
+function myMiddleware(req, res, next) {
+    console.log('Passei pelo middleware');
+        next();
+}
+
