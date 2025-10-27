@@ -17,3 +17,21 @@ describe ('Teste01 - Testar a soma', function () {
     })
 }
 );
+
+
+describe ('Teste02 - Testar Chuck', function () {
+    it ('Step 1', async function (){
+        let total = aritmetica.somatorio (10,5);
+
+        let response = await fetch('https://api.chucknorris.io/jokes/randomx');
+        let status= response.status;
+        let data = await response.json();
+
+        assert.equal(status, 200);
+    }),
+        it ('Step 2', function (){
+        let total = aritmetica.somatorio (10,5);
+        assert.notEqual(total, 10);
+    })
+}
+);

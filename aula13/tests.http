@@ -1,0 +1,28 @@
+
+
+# List users
+GET http://localhost:3000/listUsers
+Authorization: Bearer ddfdsfsfsdfsdfds
+###
+
+# new student
+POST http://localhost:3000/createUser
+Content-Type: application/json
+Authorization: Bearer ddfdsfsfsdfsdfds
+
+{ "userId": 10, "userName": "Jose", "token": "AAA"}
+
+###
+
+# list tasks
+GET http://localhost:3000/listTasks
+Authorization: Bearer qweqweqweqweqwe
+
+###
+
+# crear task
+POST http://localhost:3000/createTask
+Content-Type: application/json  
+Authorization: Bearer ddfdsfsfsdfsdfds
+
+{ "taskId": 50, "taskName": "Do youir own bed", "taskAssignedUser": 3}

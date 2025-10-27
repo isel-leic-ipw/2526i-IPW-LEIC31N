@@ -3,12 +3,17 @@
 // 1 - preparar o express
 import express from "express";
 import webapi from "./students_webapi.mjs";
+import cors  from 'cors';
+
 const app = express();
 
 //app.use(logMiddleware);
 app.use(express.json());
 
+//use middleware cors
+app.use(cors());
 
+let last_id = 0;
 
 
 
@@ -26,9 +31,8 @@ function logMiddleware(req, res, next) {
    
 }
 
-app.get ('/students', webapi.listStudents);
-app.post('/students', webapi.addStudent);
-app.get('/students', webapi.getStudent);
+app.get ('/students', webapi.getStudents);
+
 
 
 // 2- Lançar o servidor

@@ -1,0 +1,48 @@
+openapi: 3.0.4
+info:
+  title: ISEL Tasks API
+  description: |-
+    Tasks API for IPW Class
+  termsOfService: https://swagger.io/terms/
+  contact:
+    email: jose.faustino@isel.pt
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+  version: 1.0.12
+externalDocs:
+  description: Find out more about Swagger
+  url: https://swagger.io
+servers:
+  - url: http://localhost:3000/
+tags:
+  - name: Task
+    description: Access to Tasks 
+    externalDocs:
+      description: Find out more
+      url: https://swagger.io
+  - name: user
+    description: Operations about user
+paths:
+  /students:
+    get:
+      tags:
+        - user
+      summary: List users
+      description: List users
+      operationId: listUsers
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Invalid ID supplied
+        '404':
+          description: not found
+        '422':
+          description: Validation exception
+        default:
+          description: Unexpected error
+
+
+
+
