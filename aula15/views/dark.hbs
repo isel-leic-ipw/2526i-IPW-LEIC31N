@@ -1,0 +1,37 @@
+<html>
+<body style="background-color: {{favourite_color}};">
+
+Hello
+{{#if isMale}}
+    Mr. 
+{{else}}
+    Ms.
+{{/if}}
+{{name}}.
+This is my profile page <a href="{{profile}}">here</a>.
+
+<br>
+These are my children:
+<br>
+<table border="1">
+    <tr><th>Name</th><th>Age</th></tr>
+
+    {{#each children}}
+    <tr>
+        <td>
+        {{this.name}} 
+        </td>
+        <td>
+        {{this.age}} 
+        </td>
+    </tr>
+
+
+{{/each}}
+</table>
+
+
+
+</body>
+
+</html>

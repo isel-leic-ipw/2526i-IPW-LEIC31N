@@ -3,6 +3,7 @@
     "assert": "^2.1.0",
     "cors": "^2.8.5",
     "express": "^5.1.0",
+    "express-handlebars": "^8.0.3",
     "mocha": "^11.7.4"
   }
 }
