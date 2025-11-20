@@ -9,7 +9,7 @@ function listUsers() {
     return users;
 }
 
-// criar um novo utilizador
+
 function createUser(userId, userName, token) {
 
     let user = { userId, userName, token }

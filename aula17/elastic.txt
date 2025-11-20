@@ -1,0 +1,30 @@
+Elasticsearch security features have been automatically configured!
+✅ Authentication is enabled and cluster connections are encrypted.
+
+ℹ️  Password for the elastic user (reset with `bin/elasticsearch-reset-password -u elastic`):
+9CVss=Ch_Uh44P0fG_hy
+
+ℹ️  HTTP CA certificate SHA-256 fingerprint:
+  9222c4f6596c9a4f17b7c12fd57e810eef8656032be11cd2eedf8863a1a15ea2
+
+ℹ️  Configure Kibana to use this cluster:
+• Run Kibana and click the configuration link in the terminal when Kibana starts.
+• Copy the following enrollment token and paste it into Kibana in your browser (valid for the next 30 minutes):
+  eyJ2ZXIiOiI4LjE0LjAiLCJhZHIiOlsiMTkyLjE2OC4xLjIwMjo5MjAwIl0sImZnciI6IjkyMjJjNGY2NTk2YzlhNGYxN2I3YzEyZmQ1N2U4MTBlZWY4NjU2MDMyYmUxMWNkMmVlZGY4ODYzYTFhMTVlYTIiLCJrZXkiOiIxeXZGYUpvQnJ3QWFmX2R6aTF0XzpwQnpEc1lBSW1MMVFnOVpnVzY1S1V3In0=
+
+ℹ️  Configure other nodes to join this cluster:
+• On this node:
+  ⁃ Create an enrollment token with `bin/elasticsearch-create-enrollment-token -s node`.
+  ⁃ Uncomment the transport.host setting at the end of config/elasticsearch.yml.
+  ⁃ Restart Elasticsearch.
+• On other nodes:
+  ⁃ Start Elasticsearch with `bin/elasticsearch --enrollment-token <token>`, using the enrollment token that you generated.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+MAC
+
+xattr -d -r com.apple.quarantine elasticsearch-9.2.0
+
+./bin/elasticsearch
+
+http://localhost:9200/

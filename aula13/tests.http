@@ -5,12 +5,12 @@ GET http://localhost:3000/listUsers
 Authorization: Bearer ddfdsfsfsdfsdfds
 ###
 
-# new student
+# new user
 POST http://localhost:3000/createUser
 Content-Type: application/json
 Authorization: Bearer ddfdsfsfsdfsdfds
 
-{ "userId": 10, "userName": "Jose", "token": "AAA"}
+{ "userId": 11, "userName": "Miguel", "token": "MIGMIG"}
 
 ###
 
@@ -25,4 +25,4 @@ POST http://localhost:3000/createTask
 Content-Type: application/json  
 Authorization: Bearer ddfdsfsfsdfsdfds
 
-{ "taskId": 50, "taskName": "Do youir own bed", "taskAssignedUser": 3}
+{ "taskId": 51, "taskName": "Do youir own room", "taskAssignedUser": 3}

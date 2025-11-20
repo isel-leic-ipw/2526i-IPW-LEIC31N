@@ -1,15 +1,16 @@
 import user_data from './users_data_mem.mjs';
-//import user_data from './users_data_bd.mjs';
+//import user_data from './users_data_elastic.mjs';
 
-function listUsers() {
+async function listUsers() {
 
-    let users = user_data.listUsers();
+    let users = await user_data.listUsers();
+
     return users;
 }
 
 // criar um novo utilizador
-function createUser(user) {
-    return user_data.createUser(user.userId, user.userName, user.token);
+async function createUser(user) {
+    return await user_data.createUser(user.userId, user.userName, user.token);
 }
 
 export default {

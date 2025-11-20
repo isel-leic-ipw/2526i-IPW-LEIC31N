@@ -1,0 +1,97 @@
+@host = localhost
+@port = 9200
+
+###
+
+http://{{host}}:{{port}}
+
+###
+http://{{host}}:{{port}}/_all
+
+
+###
+# Criar um Indice
+PUT http://{{host}}:{{port}}/tasks
+
+###
+# Eliminar um Indice
+DELETE http://{{host}}:{{port}}/tasks
+
+###
+# Criar documento com POST
+POST http://{{host}}:{{port}}/tasks/_doc
+Content-Type: application/json
+
+{ "taskId": 1, "taskName": "Limpar o pó", "taskAssignedUser": "1"}
+
+#9saGb5oBjeVFSH83_COY
+###
+
+###
+# Criar documento com POSTPUT
+PUT http://{{host}}:{{port}}/tasks/_doc/23
+Content-Type: application/json
+
+{ "nif": "123456789" ,"taskId": 999, "taskName": "Limpar a janela", "taskAssignedUser": "1"}
+
+###
+# Lista um indice
+GET http://{{host}}:{{port}}/tasks/_search
+Content-Type: application/json
+
+
+###
+# Obter um documento
+GET http://{{host}}:{{port}}/tasks/_doc/23
+Content-Type: application/json
+
+###
+# Eliminar um documento
+DELETE http://{{host}}:{{port}}/tasks/_doc/23
+Content-Type: application/json
+
+
+###
+# Pesquisa de documentos
+GET http://{{host}}:{{port}}/tasks/_search
+Content-Type: application/json
+
+{
+    "query": {
+        "match": {
+            "taskAssignedUser": "1"
+        }
+    }
+}
+
+###
+# Melhorando a pesquisa - Paginação
+GET http://{{host}}:{{port}}/tasks/_search?from=3&size=1
+Content-Type: application/json
+
+{
+    "query": {
+        "match": {
+            "taskAssignedUser": "1"
+        }
+    }
+}
+
+
+
+###
+# Criar um Indice
+PUT http://{{host}}:{{port}}/users
+
+
+###
+# Pesquisa de users
+GET http://{{host}}:{{port}}/users/_search
+Content-Type: application/json
+
+###
+
+PUT http://{{host}}:{{port}}/users/_doc/123
+Content-Type: application/json
+
+ {"userId": 123, "userName": "Jose", "token": "JOSEJOSEJOSE"}

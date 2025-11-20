@@ -1,20 +1,22 @@
 import users_services from './users_services.mjs';
 
 
-function listUsers(req, res) {
+async function listUsers(req, res) {
 
-    let users = users_services.listUsers();
+    let users = await users_services.listUsers();
+
+    console.log(users);
 
     res.json(users);
 }
 
 // POST 
-function createUser(req, res) {
+async function createUser(req, res) {
 
     console.log(req.body);
 
     let user = req.body;
-    let token = users_services.createUser(user);
+    let token = await users_services.createUser(user);
     res.json({ token: token });
 }
 
